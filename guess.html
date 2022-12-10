@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 class="title" id="title1">APPLICATION FORM</h1>
+  <input class="add">
+  <button> CHECK </button>
+
+  <h1 class="message">check if correct..... </h1>
+
+  <script>
+    
+    
+    document.querySelector('.title').textContent='GUESS MY NUMBER btw 1 and 20'
+  document.querySelector('.title').style.backgroundColor= "red";
+  document.querySelector('.title').style.color="white";
+
+  let a = Number(document.querySelector('.add').value);
+
+  const answer= Math.trunc((Math.random()*20)+1);
+  console.log(answer);
+
+  document.querySelector('button').addEventListener('click', function(){
+
+
+     if(a>20){
+      document.querySelector('.message').textContent=`the number is more than 20`;
+    }
+    else if(a<answer){
+    document.querySelector('.message').textContent=`too small`;
+    }
+
+    else if(a>answer){
+    document.querySelector('.message').textContent=`too high`;
+    }
+    else if(a==answer){
+      document.querySelector('.message').textContent=`correct`;
+      document.querySelector('.message').style.color="white";
+      document.querySelector('body').style.backgroundColor= 'green';
+    }
+    
+    else{
+      document.querySelector('.message').textContent=`wrong prediction`;
+    }
+
+  });
+  </script>
+</body>
+</html>

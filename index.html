@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Projects</title>
+</head>
+
+<body>
+  <div class="container"style="background-color: rgba(128, 128, 128, 0.747); padding: 1pc;">
+    <div class="row">
+      <div class="col-lg-4">
+        <br /><br />
+        <h1>Simple CAL</h1>
+        <input type="text" id="1" placeholder="insert a number" /><br /><br />
+        <span id="sign"></span>
+        <input type="text" id="2" placeholder="insert a number" />
+        <p>
+          =
+          <span id="ans"></span>
+        </p>
+        <button onclick="fun()" value="+">+</button>
+        <button onclick="fan()" value="*">*</button>
+        <button onclick="bob()" value="/">/</button>
+        <button onclick="bub()" value="-">-</button>
+      </div>
+      <div class="col-lg-4">
+        <br /><br />
+        <h4>Investment CAL</h4>
+        <input type="text" id="invest" placeholder="insert amount" /><br /><br />
+        <select id="value">
+          <option value="1">1 month</option>
+          <option value="2">2 month</option>
+          <option value="3">3 month</option>
+          <option value="4">4 month</option>
+          <option value="5">5 month</option>
+          <option value="6">6 month</option>
+          <option value="7">7 month</option>
+          <option value="8">8 month</option>
+          <option value="9">9 month</option>
+          <option value="10">10 month</option>
+        </select>
+        <p id="gt"></p>
+        <button onclick="kola()" value="=">=</button>
+      </div>
+      <div class="col-lg-4"><br><br>
+        <h1>Jamb time</h1>
+        <h1>
+          <span id="minutes">00</span>
+          <span id="colon">:</span>
+          <span id="seconds">00</span>
+        </h1>
+
+        <button id="startbtn">start</button>
+        <button id="pausebtn">Pause</button>
+        <button id="resetbtn">Reset</button>
+      </div>
+    </div>
+    </div><br><br>
+      <div class="container" style="background-color: rgba(128, 128, 128, 0.747); ">
+        <div class="row">
+          <div class="col-lg-4"><br><br>
+            <h4>COUNTDOWN TO CHRISTMAS</h4>
+    
+    
+            <h2 id="countTime"></h2>
+          </div>
+          <div class="col-lg-4">
+            <div id="olu">
+              <h1 style="margin:5px">Add subject</h1>
+    
+              <input type="text" id="tola" placeholder="subjects..." style=" padding:3px 5px; font-size:24px"><br><br>
+    
+              <button onclick="tunji()" style="cursor:pointer; padding:3px 5px;  font-size:24px">+
+                add</button>
+    
+            </div>
+    
+            <ol id="subject" style="font-size:36px">
+    
+          </div>
+          <div class="col-lg-4">
+            <h1 class="title" id="title1">APPLICATION FORM</h1>
+            <input class="add">
+            <button id="pol"> CHECK </button>
+          
+            <h1 class="message">check if correct..... </h1>
+          </div>
+        </div>
+      </div><br><br>
+      <div class="container"style="background-color: rgba(128, 128, 128, 0.747); padding: 1pc;" >
+        <div class="row">
+          <div class="col-lg-4">
+            <div>
+              <h4>LOAN CALCULATOR</h4>
+              <label>HOW MUCH DO YOU WANT TO BORROW</label><br>
+              <input class="form-control-sm" id="o" placeholder="Loan Amount"><br>
+              <label >INTREST RATE IN %AGE</label><br>
+              <input class="form-control-sm" id="p" placeholder="Interest"><br>
+              <label>LOAN DURATION PER YEAR</label><br>
+              <input class="form-control-sm" id="l" placeholder="Duration">
+              <br>
+              <br>
+              <button onclick="per()">CAL</button>
+              <p id="box"></p>
+            </div>
+            
+          </div>
+          <div class="col-lg-4">
+            <h1 id="time"></h1>
+          </div>
+        </div>
+      </div>
+  
+
+
+  <script>
+    function fun() {
+      let a = document.getElementById("1").value;
+      let b = document.getElementById("2").value;
+      let sum = Number(a) + Number(b);
+      document.getElementById("ans").innerHTML = sum;
+    }
+    function fan() {
+      let a = document.getElementById("1").value;
+      let b = document.getElementById("2").value;
+      let sum = Number(a) * Number(b);
+      document.getElementById("ans").innerHTML = num1 * num2;
+    }
+    function bob() {
+      let a = document.getElementById("1").value;
+      let b = document.getElementById("2").value;
+      let sum = Number(a) / Number(b);
+      document.getElementById("ans").innerHTML = num1 / num2;
+    }
+    function bub() {
+      let a = document.getElementById("1").value;
+      let b = document.getElementById("2").value;
+      let sum = Number(a) - Number(b);
+      document.getElementById("ans").innerHTML = num1 - num2;
+    }
+
+    function kola() {
+      let a = Number(document.getElementById("invest").value); 
+      let b = document.getElementById("value").value;
+      let c = a * 0.1;
+      let roi = c * b ;
+      let ui = roi+a;
+      document.getElementById("gt").innerHTML =
+        `you are to receive ${ui}`;
+    }
+
+    let a = 0;
+    let b = document.getElementById("seconds");
+    let c = document.getElementById("minutes");
+    let g = document.getElementById("startbtn");
+    let h = document.getElementById("pausebtn");
+    let i = document.getElementById("resetbtn");
+
+    function setTime() {
+      ++a;
+      let d = olu(a % 60);
+      b.innerHTML = d;
+
+      let r = olu(parseInt(a / 60));
+      c.innerHTML = r;
+
+      if (r == 1) {
+        clearInterval(k);
+      }
+    }
+
+    let start = function () {
+      k = setInterval(setTime, 1000);
+    };
+
+    let pause = function () {
+      clearInterval(k);
+    };
+
+    let reset = function () {
+      clearInterval(k);
+      a = 0;
+    };
+
+    g.addEventListener("click", start);
+    h.addEventListener("click", pause);
+    i.addEventListener("click", reset);
+
+    function olu(x) {
+      let kola = x + "";
+      if (kola.length < 2) {
+        return "0" + kola;
+      } else {
+        return kola;
+      }
+    }
+
+    h.onclick = function () {
+      h.style.display = "inline";
+      g.style.display = "none";
+    };
+
+    h.onclick = function () {
+      g.style.display = "inline";
+      h.style.display = "none";
+    };
+
+    i.onclick = function () {
+      g.style.display = "inline";
+      h.style.display = "none";
+    };
+
+    function myCountDown() {
+
+
+
+
+      let targetTime = new Date('december, 25 2022 00:00:00').getTime();
+
+      let currentTime = new Date().getTime();
+
+      let distance = targetTime - currentTime;
+
+      let days = Math.floor(distance / (24 * 60 * 60 * 1000));
+
+      let Hours = Math.floor((distance %
+        (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+
+      let minutes = Math.floor((distance %
+        (60 * 60 * 1000) / (60 * 1000)));
+
+      let seconds = Math.floor((distance %
+        (60 * 1000) / (1000)));
+
+      if (distance < 0) {
+        clearInterval(x);
+      }
+
+      document.getElementById('countTime').innerHTML = days + 'days' + ' ' + Hours + 'Hours' + ' ' + minutes + 'minutes' + ' ' + seconds + 'seconds' + ' '
+    }
+
+    let x = setInterval(myCountDown, 1000);
+
+
+
+    let tunji = function () {
+      let a = document.getElementById('olu');
+      let b = document.getElementById('tola').value;
+      let c = document.getElementById('subject');
+
+      let d = document.createElement('li');
+      let e = document.createTextNode(b);
+      d.appendChild(e);
+      c.appendChild(d);
+      document.getElementById('tola').value = '';
+
+
+      let x = document.createElement('span');
+      let y = document.createTextNode('\u00d7');
+      x.appendChild(y);
+      x.style.backgroundColor = "red";
+      x.style.color = "white";
+      x.style.cursor = "pointer";
+      x.className = 'close';
+
+      d.appendChild(x);
+
+      let f = document.getElementsByClassName('close');
+      let i;
+      for (i = 0; i < f.length; i++) {
+        f[i].onclick = function () {
+          this.parentNode.style.display = "none"
+        }
+
+      }
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === "Enter") {
+        tunji();
+      };
+    });
+
+  
+    document.querySelector('.title').textContent='GUESS MY NUMBER btw 1 and 20'
+  document.querySelector('.title');
+  document.querySelector('.title').style.color="white";
+
+  let t = Number(document.querySelector('.add').value);
+
+  const answer= Math.trunc((Math.random()*20)+1);
+  console.log(answer);
+
+  document.querySelector('#pol').addEventListener('click', function(){
+
+
+     if(t>20){
+      document.querySelector('.message').textContent=`the number is more than 20`;
+    }
+    else if(t<answer){
+    document.querySelector('.message').textContent=`too small`;
+    }
+
+    else if(t>answer){
+    document.querySelector('.message').textContent=`too high`;
+    }
+    else if(t==answer){
+      document.querySelector('.message').textContent=`correct`;
+      document.querySelector('.message').style.color="white";
+      document.querySelector('body').style.backgroundColor= 'green';
+    }
+    
+    else{
+      document.querySelector('.message').textContent=`wrong prediction`;
+    }
+
+  });
+
+
+  function per() {
+    let g = Number(document.getElementById ("o").value);
+    let w = Number(document.getElementById ("p").value);
+    let k = Number(document.getElementById ("l").value);
+
+
+    let interest = g / w;
+    let t = g+interest;
+    let total = t / k
+    let tot = Math.round(total);
+    document.getElementById("box").innerHTML = "You are to pay" + " " + '#'+  tot + ' ' + "yearly for"+ k + "years";    
+
+      // let interest = g / w;
+      // let years = interest * k;
+      // let total = g + years;
+      // let e = total/k
+      // let t = Math.round(e) 
+      // document.getElementById("box").innerHTML = "You are to pay" + " " + '#'+  t + ' ' + "yearly for"     
+
+  }  
+
+
+  function nowTime() {
+        let hh = new Date().getHours();
+        let mm = new Date().getMinutes();
+        let ss = new Date().getSeconds();
+
+        let session = "AM";
+        if (hh == 0) {
+          hh = 12;
+        }
+        if (hh > 12) {
+          hh = hh - 12;
+          session = "PM";
+        }
+        hh = hh < 10 ? "0" + hh : hh;
+        mm = mm < 10 ? "0" + mm : mm;
+        ss = ss < 10 ? "0" + ss : ss;
+
+        let time = hh + ":" + mm + ":" + ss + " " + session;
+        document.getElementById("time").innerHTML = time;
+        setTimeout(nowTime, 1000);
+      }
+      nowTime();
+
+
+    
+  
+  </script>
+</body>
+
+</html>
